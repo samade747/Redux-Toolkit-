@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../store/reducers/Counter";
 
 export const Home = () => {
-    const state = useSelector((state) => state.counter);
+    const count = useSelector((state) => state.counter.count);
     const dispatch = useDispatch();
 
 
@@ -22,7 +22,7 @@ const decCounter = () => {
 
 return(
     <div>
-        <h1>Counter: {counter}</h1>
+        <h1>Counter: {count}</h1>
         <button onClick={incCounter}> </button>
         <button onClick={decCounter}> </button>
 
